@@ -1,0 +1,151 @@
+==[ 1. SQL Instance Details ]==
+backendType: SECOND_GEN
+connectionName: devlife4me-generic-apps:us-central1:backend3-dev
+createTime: '2025-03-29T19:31:08.103Z'
+databaseInstalledVersion: POSTGRES_16_8
+databaseVersion: POSTGRES_16
+etag: e0bfbf7a9ac34f13d78ed16bbad2eefd39ac7bb27de6154cd46e7b76931500df
+gceZone: us-central1-c
+geminiConfig:
+  activeQueryEnabled: false
+  entitled: false
+  googleVacuumMgmtEnabled: false
+  indexAdvisorEnabled: false
+  oomSessionCancelEnabled: true
+includeReplicasForMajorVersionUpgrade: false
+instanceType: CLOUD_SQL_INSTANCE
+ipAddresses:
+- ipAddress: 10.9.0.3
+  type: PRIVATE
+kind: sql#instance
+maintenanceVersion: POSTGRES_16_8.R20250302.00_04
+name: backend3-dev
+project: devlife4me-generic-apps
+region: us-central1
+satisfiesPzi: false
+selfLink: https://sqladmin.googleapis.com/sql/v1beta4/projects/devlife4me-generic-apps/instances/backend3-dev
+serverCaCert:
+  cert: |-
+    -----BEGIN CERTIFICATE-----
+    MIIDfzCCAmegAwIBAgIBADANBgkqhkiG9w0BAQsFADB3MS0wKwYDVQQuEyRkYTJl
+    ZjJkNC1iMmIxLTRmYTUtYWFhZS1lMmE3YmZlZjUwY2IxIzAhBgNVBAMTGkdvb2ds
+    ZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUsIEluYzELMAkG
+    A1UEBhMCVVMwHhcNMjUwMzI5MTkzMDQ5WhcNMzUwMzI3MTkzMTQ5WjB3MS0wKwYD
+    VQQuEyRkYTJlZjJkNC1iMmIxLTRmYTUtYWFhZS1lMmE3YmZlZjUwY2IxIzAhBgNV
+    BAMTGkdvb2dsZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUs
+    IEluYzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+    AQCbvxxojTBgfO17Du/ICm1PhbegU830JKZkWQ23k+SZZuQ267VNxB1FnsI14PXa
+    TC4cjv6L6ABCDv+hsPWCL98lvnv/6fuC3Ekvqwtc5R/iVdad0J4byAaRSuCUQCrn
+    dwEihfRXHZ7NqY5VGSroxOUN6HPlMtwJKD5TH9PeFy39vrD9wqRUOQP0LvIPAWk2
+    a7eG2XcrJlb+fwVx76gg4Yde+WcE9OMackzvQhTuH4hJyY3xRTXwGW+faap4VrQp
+    2Lo0prolVPPPMx6+HAWk1HYXiinYj2xpNCWWKPYmN3xU0tD+Gfu72cseZP/1Hzay
+    1tlJ2glNHTLgGE3WyMQ+BPtvAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYBAf8CAQAw
+    DQYJKoZIhvcNAQELBQADggEBAGP7hOh6mt+1N1t74cyUC6+1NsBrDfcRPcKPUW8p
+    x0K8XVgJOVe3uURJXShvlPGwqTkFKkce12/jQq+CKII0ZI5V/LQB5MtDwMNMS/gZ
+    TdNkEa32J6lw5ABmfawSUQBcBr2kTFTWK5S2q9ICKESKm1cemUfC8O/2BnpPoa+f
+    dwQxCQu1AUznWuPCDmSDamBsSxafm8GkuXJjqEuLSTngZjfz/9sL676Mc8z+iQje
+    4F4uaknfXFoSv2agscq2Kstf25usALD7DLUcOc+FqDah/1RJcRWy0baj+UCh3cfK
+    ox/6z9HuRHd8PML/p/vh4WGM/r2rlGhn4nKaFp4TfY+olfE=
+    -----END CERTIFICATE-----
+  certSerialNumber: '0'
+  commonName: C=US,O=Google\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=da2ef2d4-b2b1-4fa5-aaae-e2a7bfef50cb
+  createTime: '2025-03-29T19:30:49.431Z'
+  expirationTime: '2035-03-27T19:31:49.431Z'
+  instance: backend3-dev
+  kind: sql#sslCert
+  sha1Fingerprint: d3d4c7a187e9c1cb4813fac60ec86875bb6d9c3b
+serviceAccountEmailAddress: p231132905887-tjxsr1@gcp-sa-cloud-sql.iam.gserviceaccount.com
+settings:
+  activationPolicy: ALWAYS
+  availabilityType: ZONAL
+  backupConfiguration:
+    backupRetentionSettings:
+      retainedBackups: 7
+      retentionUnit: COUNT
+    enabled: true
+    kind: sql#backupConfiguration
+    location: us
+    pointInTimeRecoveryEnabled: true
+    replicationLogArchivingEnabled: true
+    startTime: 02:00
+    transactionLogRetentionDays: 7
+    transactionalLogStorageState: CLOUD_STORAGE
+  connectorEnforcement: NOT_REQUIRED
+  dataDiskSizeGb: '10'
+  dataDiskType: PD_HDD
+  deletionProtectionEnabled: true
+  edition: ENTERPRISE
+  enableGoogleMlIntegration: false
+  insightsConfig: {}
+  ipConfiguration:
+    authorizedNetworks:
+    - kind: sql#aclEntry
+      name: ''
+      value: 0.0.0.0/0
+    - kind: sql#aclEntry
+      name: ''
+      value: 69.242.67.101/32
+    ipv4Enabled: false
+    privateNetwork: projects/devlife4me-generic-apps/global/networks/backend3-vpc-dev
+    requireSsl: false
+    serverCaMode: GOOGLE_MANAGED_INTERNAL_CA
+    sslMode: ALLOW_UNENCRYPTED_AND_ENCRYPTED
+  kind: sql#settings
+  locationPreference:
+    kind: sql#locationPreference
+    zone: us-central1-c
+  maintenanceWindow:
+    day: 0
+    hour: 0
+    kind: sql#maintenanceWindow
+    updateTrack: canary
+  pricingPlan: PER_USE
+  replicationLagMaxSeconds: 31536000
+  replicationType: SYNCHRONOUS
+  retainBackupsOnDelete: false
+  settingsVersion: '45'
+  storageAutoResize: true
+  storageAutoResizeLimit: '0'
+  tier: db-custom-1-3840
+  userLabels:
+    env-type: dev
+sqlNetworkArchitecture: NEW_NETWORK_ARCHITECTURE
+state: RUNNABLE
+upgradableDatabaseVersions:
+- displayName: PostgreSQL 17
+  majorVersion: POSTGRES_17
+  name: POSTGRES_17
+==[ 2. VPC Connector Details ]==
+connectedProjects:
+- devlife4me-generic-apps
+machineType: f1-micro
+maxInstances: 3
+maxThroughput: 300
+minInstances: 2
+minThroughput: 200
+name: projects/devlife4me-generic-apps/locations/us-central1/connectors/backend3-connector-dev
+network: backend3-vpc-dev
+state: READY
+subnet:
+  name: connector-subnet-dev
+  projectId: devlife4me-generic-apps
+==[ 3. Cloud Run Service Environment Variables ]==
+spec.template.spec.containers[0].env[0].name:  SPRING_PROFILES_ACTIVE
+spec.template.spec.containers[0].env[0].value: dev
+==[ 4. Cloud Run Service Account IAM Roles ]==
+ROLE
+roles/cloudsql.client
+roles/secretmanager.secretAccessor
+==[ 5. VPC Connector Subnet Routes List ]==
+NAME                              NETWORK           DEST_RANGE   NEXT_HOP                          PRIORITY
+default-route-eb31b009f7f493fe    backend3-vpc-dev  0.0.0.0/0    default-internet-gateway          1000
+default-route-r-737cb8dbd00c2cba  backend3-vpc-dev  10.8.0.0/28  backend3-vpc-dev                  0
+peering-route-21fbc8f26ca099f3    backend3-vpc-dev  10.9.0.0/24  servicenetworking-googleapis-com  0
+==[ 6. Connector and SQL Subnet CIDR Ranges ]==
+NAME                  REGION       RANGE
+connector-subnet-dev  us-central1  10.8.0.0/28
+==[ 7. Firewall Rules ]==
+NAME                    NETWORK           DIRECTION  PRIORITY  ALLOW     DENY  DISABLED
+allow-cloud-run-to-sql  backend3-vpc-dev  EGRESS     1000      tcp:5432        False
+==[ 8. Verify Access to GCP APIs Through VPC ]==
+True

@@ -4,24 +4,25 @@
 START_DIR="${1:-.}"
 
 # Directories to ignore
-IGNORE_DIRS=("node_modules" "test" "venv" ".git" "dist" "target" "build" ".idea" ".mvn")
+IGNORE_DIRS=("node_modules" "test" "venv" ".git" "dist" "target" "build" ".idea" ".mvn" "hist" "scripts")
 
 # Files to ignore (exact matches, case-sensitive)
-IGNORE_FILES=("secrets.env" "config.json" "debug.log" ".gitignore" "package-lock.json" "README.md" "eslint.config.js" "PROMPT.md" "DEV.md" "mvnw" "mvnw.cmd" ".gitattributes" "backend3-sql-access-key.json" "cloud_sql_proxy" "HELP.md" "DEPLOY.md")
+IGNORE_FILES=("clipboard.txt" "secrets.env" "config.json" "debug.log" ".gitignore" "package-lock.json" "README.md" "eslint.config.js" "PROMPT.md" "DEV.md" "mvnw" "mvnw.cmd" ".gitattributes" "backend3-sql-access-key.json" "cloud_sql_proxy" "HELP.md" "DEPLOY.md")
 
 # File patterns to ignore (wildcards)
 IGNORE_PATTERNS=("*.css" "*.log" "*.env" "*.svg")
 
-# Build the find command dynamically to exclude directories
-FIND_CMD="find \"$START_DIR\""
+FIND_CMD="find \"$START_DIR\" \\("
 for DIR in "${IGNORE_DIRS[@]}"; do
-    FIND_CMD+=" -type d -name \"$DIR\" -prune -o"
+    FIND_CMD+=" -name \"$DIR\" -o"
 done
-FIND_CMD+=" -type f -print"  # Ensure it prints files that are not pruned
+FIND_CMD="${FIND_CMD% -o}"  # safer trim for trailing ' -o'
+FIND_CMD+=" \\) -prune -o -type f -print"
 
 # Initialize output string
 OUTPUT="\n---START-OF-PROJECT-FILES---\n\n"
 
+echo "DEBUG: $FIND_CMD"
 # Recursively find all files and process them
 while IFS= read -r file; do
     # Extract base name
